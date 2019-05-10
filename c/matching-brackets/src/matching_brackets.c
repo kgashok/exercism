@@ -21,7 +21,7 @@ bool is_paired(const char* code) {
         }
         // does the closer match the token on the top of the
         // stack?
-        if((idx = strchr(closers, *code))) {
+        if(strchr(closers, *code)) {
             if (stack[strlen(stack)-1] == *code)
                 stack[strlen(stack)-1] = '\0';
             else
