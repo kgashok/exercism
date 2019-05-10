@@ -16,9 +16,9 @@ bool is_paired(const char* code) {
         const char* idx;
         // push the corresponding closer for an opener
         // on to the stack
-        if((idx = strchr(openers, *code))){
+        if((idx = strchr(openers, *code)))
             stack[++top] = closers[idx-openers];
-        }
+
         // does the closer match the token on the top of the
         // stack?
         if(strchr(closers, *code)) {
