@@ -13,10 +13,14 @@ bool is_paired(const char* code) {
 
     for (; *code; code++) {
         const char* idx;
+        // push the corresponding closer for an opener
+        // on to the stack
         if((idx = strchr(openers, *code))){
             stack[strlen(stack)] = closers[idx-openers];
             stack[strlen(stack)+1] = '\0';
         }
+        // does the closer match the token on the top of the
+        // stack?
         if((idx = strchr(closers, *code))) {
             if (stack[strlen(stack)-1] == *code)
                 stack[strlen(stack)-1] = '\0';
@@ -24,6 +28,7 @@ bool is_paired(const char* code) {
                 return false;
         }
     }
+    // if the stack is empty, then pairs are balanced
     return strlen(stack)? false: true;
 
 }
