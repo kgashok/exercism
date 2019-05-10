@@ -5,8 +5,8 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-const char* openers = "[{";
-const char* closers = "]}";
+const char* openers = "[{(";
+const char* closers = "]})";
 
 bool is_paired(const char* code) {
     char *stack = calloc(100, 1);
