@@ -18,63 +18,63 @@ void test_paired_square_brackets(void)
 
 void test_empty_string(void)
 {
-   TEST_IGNORE();               // delete this line to run test
+   //TEST_IGNORE();               // delete this line to run test
    const char *input = "";
    TEST_ASSERT_TRUE(is_paired(input));
 }
 
 void test_unpaired_brackets(void)
 {
-   TEST_IGNORE();
+   //TEST_IGNORE();
    const char *input = "[[";
    TEST_ASSERT_FALSE(is_paired(input));
 }
 
 void test_wrong_ordered_brackets(void)
 {
-   TEST_IGNORE();
+   //TEST_IGNORE();
    const char *input = "}{";
    TEST_ASSERT_FALSE(is_paired(input));
 }
 
 void test_wrong_closing_bracket(void)
 {
-   TEST_IGNORE();
+   //TEST_IGNORE();
    const char *input = "{]";
    TEST_ASSERT_FALSE(is_paired(input));
 }
 
 void test_paired_with_whitespace(void)
 {
-   TEST_IGNORE();
+   //TEST_IGNORE();
    const char *input = "{ }";
    TEST_ASSERT_TRUE(is_paired(input));
 }
 
 void test_simple_nested_brackets(void)
 {
-   TEST_IGNORE();
+   //TEST_IGNORE();
    const char *input = "{[]}";
    TEST_ASSERT_TRUE(is_paired(input));
 }
 
 void test_several_paired_brackets(void)
 {
-   TEST_IGNORE();
+   //TEST_IGNORE();
    const char *input = "{}[]";
    TEST_ASSERT_TRUE(is_paired(input));
 }
 
 void test_paired_and_nested_brackets(void)
 {
-   TEST_IGNORE();
+   //TEST_IGNORE();
    const char *input = "([{}({}[])])";
    TEST_ASSERT_TRUE(is_paired(input));
 }
 
 void test_unopened_closing_brackets(void)
 {
-   TEST_IGNORE();
+   //TEST_IGNORE();
    const char *input = "{[)][]}";
    TEST_ASSERT_FALSE(is_paired(input));
 }
