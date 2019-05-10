@@ -1,15 +1,13 @@
-import string
+def hey(remark):
 
-
-def hey(input):
     out = None
-    input = input.strip()
-    
-    if not input:
+    remark = remark.strip()
+
+    if not remark:
         out = "Fine. Be that way!"
-    elif input.isupper():
+    elif remark.isupper():
         out = "Whoa, chill out!"
-    elif input[-1] == '?':
+    elif remark[-1] == '?':
         out = "Sure."
     else:
         out = "Whatever."
