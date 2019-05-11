@@ -21,10 +21,11 @@ bool is_duplicate(const char *hay, const char needle) {
 }
 
 // returns true if the text has no duplicates
-// If 'check_only_alpha' is set, duplicate checking is 
+// If 'check_only_alpha' is set, duplicate checking is
 // limited to alphabets only
 bool has_no_duplicates(const char *text, bool check_only_alpha) {
   char c;
+  if (!text) return false;
   while ((c = *text)) {
     if (check_only_alpha && !isalpha(c)) {
       text++;

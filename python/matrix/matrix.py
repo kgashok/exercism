@@ -13,7 +13,8 @@ class Matrix (object):
 '''
 # Matrix
 
-Write a program that, given a string representing a matrix of numbers, can return the rows and columns of that matrix.
+Write a program that, given a string representing a matrix of numbers,
+can return the rows and columns of that matrix.
 
 So given a string with embedded newlines like:
 

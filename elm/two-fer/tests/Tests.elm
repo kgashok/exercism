@@ -12,11 +12,11 @@ tests =
         [ test "No name given" <|
             \() ->
                 Expect.equal "One for you, one for me." (twoFer Nothing)
-        , skip <|
+        , -- skip <|
             test "A name given" <|
                 \() ->
                     Expect.equal "One for Alice, one for me." (twoFer (Just "Alice"))
-        , skip <|
+        , -- skip <|
             test "Another name given" <|
                 \() ->
                     Expect.equal "One for Bob, one for me." (twoFer (Just "Bob"))
