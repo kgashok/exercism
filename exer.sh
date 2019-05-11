@@ -6,3 +6,5 @@ source ~/.bash_profile
 
 exercism configure --token=19d99b4f-858e-4a0b-82b6-f5d6d930a1e0 --workspace /workspace/exercism/
 
+npm install -g elm@elm0.19.0 elm-test@elm0.19.0 &
+npm install -g elm-format  &
