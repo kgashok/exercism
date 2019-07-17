@@ -2,7 +2,7 @@
 This module provides for function to check for pangram
 """
 
-from string import ascii_lowercase as english_alphabet
+from string import ascii_lowercase as alphabets
 
 
 def is_pangram(text):
@@ -13,6 +13,4 @@ def is_pangram(text):
     True
     '''
 
-    alphabet = set(english_alphabet)
-    text = set(text.lower())
-    return alphabet.issubset(text)
+    return set(alphabets).issubset(text.lower())
